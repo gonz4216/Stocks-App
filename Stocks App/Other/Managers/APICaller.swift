@@ -10,19 +10,30 @@ import Foundation
 final class APICaller {
     static let shared = APICaller()
     private struct Constants {
-        static let apiKey = ""
-        static let sandboxApiKey = ""
-        static let baseUrl = ""
+        static let apiKey = "cf05go2ad3iasqg2pqp0cf05go2ad3iasqg2pqpg"
+        static let sandboxApiKey = "https://finnhub.io/api/v1/"
+        static let baseUrl = "https://finnhub.io/api/v1/"
     }
     private init() {
         
     }
     
     // MARK: -Public
+    public func search(
+        query: String,
+        completion: @escaping (Result<SearchResponse, Error>) -> Void
+        
+    ) {
+        request(
+            url: url(for: .search,
+                     queryParams: ["q":query]
+                    ),
+            expecting: SearchResponse.self, completion: completion
+         
+        )
+    }
     
-    // get stock info
     
-    //search stocks
     
     //MARK: - Private
     
@@ -40,8 +51,21 @@ final class APICaller {
         queryParams: [String: String] = [:]
     ) -> URL? {
         
+        var urlString = Constants.baseUrl + endpoint.rawValue
         
-        return nil
+        var queryItems = [URLQueryItem]()
+        // Add any parameters
+        for (name, value) in queryParams {
+            queryItems.append(.init(name: name, value: value))
+        }
+        // add token
+        queryItems.append(.init(name: "token", value: Constants.apiKey))
+        
+        //convert queri items to suffix string
+        
+        urlString += "?" + queryItems.map { "\($0.name)=\($0.value ?? "")"}.joined(separator: "&")
+        print("\n\(urlString)\n")
+        return URL(string: urlString)
     }
     
     
@@ -80,6 +104,6 @@ final class APICaller {
         task.resume()
         
     }
-        
-          
+    
+    
 }

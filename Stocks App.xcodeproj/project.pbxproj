@@ -20,6 +20,7 @@
 		9D851ABA296F627500179A56 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D851AB9296F627500179A56 /* HapticsManager.swift */; };
 		9D851ABC296FBB0200179A56 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D851ABB296FBB0200179A56 /* Extenstions.swift */; };
 		9D851ABE296FBCF500179A56 /* SearchResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D851ABD296FBCF500179A56 /* SearchResultsTableViewCell.swift */; };
+		9D851AC0297092FF00179A56 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D851ABF297092FF00179A56 /* SearchResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		9D851AB9296F627500179A56 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		9D851ABB296FBB0200179A56 /* Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
 		9D851ABD296FBCF500179A56 /* SearchResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewCell.swift; sourceTree = "<group>"; };
+		9D851ABF297092FF00179A56 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		9D851AAA296F5F8F00179A56 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9D851ABF297092FF00179A56 /* SearchResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				9D851AB8296F626600179A56 /* PersistenceManager.swift in Sources */,
 				9D851AB6296F625000179A56 /* APICaller.swift in Sources */,
 				9D851ABC296FBB0200179A56 /* Extenstions.swift in Sources */,
+				9D851AC0297092FF00179A56 /* SearchResponse.swift in Sources */,
 				9D851A97296F5F7B00179A56 /* AppDelegate.swift in Sources */,
 				9D851A99296F5F7B00179A56 /* SceneDelegate.swift in Sources */,
 				9D851AB2296F603F00179A56 /* SearchResultsViewController.swift in Sources */,
